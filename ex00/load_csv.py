@@ -3,6 +3,14 @@ from pandas import DataFrame
 
 
 def load(path: str) -> DataFrame:
+    """load csv file and return DataFrame
+
+    Args:
+        path (str)
+
+    Returns:
+        DataFrame or None on fail
+    """
     if path.endswith(".csv") is False:
         print("Most be .csv file extension!")
         return None

@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 
 
 def aff_life():
+    """load file and plot life expectancy data
+    """
     df = load("../life_expectancy_years.csv")
     if df is None:
         return

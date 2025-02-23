@@ -4,7 +4,7 @@ import matplotlib.ticker as mtick
 import pandas as pd
 
 
-def format_population(x, pos):
+def format_population(x, pos) -> str:
     """format absolute population values to human readable format
 
     Args:
@@ -13,7 +13,7 @@ def format_population(x, pos):
 
     Returns:
         string: string formated
-    """    
+    """
     if x >= 1e9:
         return f'{x/1e9}B'
     elif x >= 1e6:
@@ -25,7 +25,7 @@ def format_population(x, pos):
 
 def aff_pop():
     """load file and plot population data
-    """    
+    """
     df = load("../population_total.csv")
     my_campus = "Bahamas"
     other = "Vanuatu"
